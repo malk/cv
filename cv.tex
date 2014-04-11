@@ -1,16 +1,27 @@
 \documentclass[10pt,a4paper,roman]{moderncv}
 
-\moderncvtheme[blue]{classic}
-\nopagenumbers{}
+\moderncvtheme[blue]{classic}   % I use the moderncv package
+                                % http://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
+                                % from its colors blue was the only one I
+                                % did not hate, and the classic style the
+                                % only one I managed to make fontawesome
+                                % work
 
-\usepackage[cyr]{aeguill}
-\usepackage{xspace}
-\usepackage[francais]{babel}
-\usepackage{fontspec}
-\usepackage{metalogo}
-\setmainfont{EB Garamond}
+\nopagenumbers{}                % My CV is an enormous effort to be a
+                                % one-page deal; so there will always be a
+                                % single page, there is no reason to have
+                                % page number that would just take precious
+                                % space
 
-% adjust the page margins
+\usepackage[cyr]{aeguill}       % this is just to have a correct ae char
+\usepackage{xspace}             % better for french mode
+\usepackage[francais]{babel}    % I live in France, my CV/resume is in french
+
+\usepackage{fontspec}           % needed by XeTeX so I can use my special fonts
+\usepackage{metalogo}           % Needed for the \XeTeX logo
+\setmainfont{EB Garamond}       % I have a fondness for Garamond fonts; this is my current pick
+
+
 \usepackage[scale=0.7991]{geometry}
 \setlength{\hintscolumnwidth}{1.8cm}
 
@@ -24,7 +35,12 @@
 \social[twitter]{@malk\_zameth}
 %\social[github]{malk}
 \photo[64pt][0pt]{photo.jpg}
-\quote{Architecte, développeur polyglotte, agiliste, lead technique}
+
+% French CVs do not have quotes, it is not the custom, but they do have a
+% "profile", a single phrase where you try to convey as succintly as
+% possible what kind of work one should hie you for; the quote functionality
+% of modercv works remarkably well for that
+\quote{Architecte, développeur polyglotte, agiliste, lead technique.}
 
 \begin{document}
 \makecvtitle
