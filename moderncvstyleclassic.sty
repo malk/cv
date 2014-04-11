@@ -192,15 +192,22 @@
     {}%
     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
 
-\renewcommand*{\cventry}[7][.25em]{%
+\renewcommand*{\cventry}[7][1.7ex]{%
   \cvitem[#1]{#2}{%
-    {\bfseries#3}%
-    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    {\scshape#3}%
+    \ifthenelse{\equal{#4}{}}{}{\hfill {\itshape#4}}%
+    \ifthenelse{\equal{#5}{}}{}{{\small , #5}}%
     \ifthenelse{\equal{#6}{}}{}{, #6}%
-    .\strut%
+    \strut%
     \ifx&#7&%
-      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+    \else{\newline{}\begin{minipage}[t]{\linewidth}#7\end{minipage}}\fi}}
+
+\newcommand*{\cvformation}[5][0.2ex]{%
+  \cvitem[#1]{#2}{%
+    {#3}%
+    \ifthenelse{\equal{#4}{}}{}{\hfill {\itshape#4}}%
+    \ifthenelse{\equal{#5}{}}{}{{\small , #5}}%
+    {}{}}}
 
 \newbox{\cvitemwithcommentmainbox}
 \newlength{\cvitemwithcommentmainlength}

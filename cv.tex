@@ -21,10 +21,22 @@
 \usepackage{metalogo}           % Needed for the \XeTeX logo
 \setmainfont{EB Garamond}       % I have a fondness for Garamond fonts; this is my current pick
 
+\usepackage{setspace}
 
-\usepackage[scale=0.7991]{geometry}
-\setlength{\hintscolumnwidth}{1.8cm}
-
+\usepackage[
+noheadfoot,                     % no footnotes nor header
+nomarginpar,                    % no margin notes
+%showframe,                      % to use while drafting
+% scale=0.7991,                   % make it fit in one page!
+height=797.9540030882579pt,
+bottom=29.10496956641882pt,
+left=78pt,
+width=420.893929pt,
+%right=109.15341780702752pt,
+driver=xetex                    % I always use XeTeX
+]{geometry}
+\setlength{\hintscolumnwidth}{47.6pt}
+\setlength{\makecvtitlenamewidth}{214pt}
 \name{Romeu}{\textsc{Moura}}
 \title{Architecte Logiciel}
 \address{1 Allée Carpeaux}{93800 Épinay-sur-Seine}
@@ -39,40 +51,38 @@
 % French CVs do not have quotes, it is not the custom, but they do have a
 % "profile", a single phrase where you try to convey as succintly as
 % possible what kind of work one should hie you for; the quote functionality
-% of modercv works remarkably well for that
+% of modercv works well for that
 \quote{Architecte, développeur polyglotte, agiliste, lead technique.}
 
 \begin{document}
+\frenchspacing                  % no double space after a period
+\setstretch{1.25}
 \makecvtitle
 
 \section{Compétences}
-\cvitem{Méthode}{eXtreme Programming, Scrum, ATDD, TDD, Specification by Example, continuous integration \& delivery}
-\cvitem{Architecture}{Architecture hexagonale, SOA, Microservices, DDD, EAI, Event-Driven}
-\cvitem{Langages}{Ada, C, Clips, \emph{Clojure}, CoffeeScript, Java, JavaScript, Haskell, oCaml, Perl, PHP, Python, Ruby, Scala, SQL, Shell}
-\cvitem{Utilitaires}{Apache, vagrant, docker, Jenkins, Git, cucumber, ant, maven, gradle, Nagios, eshell, Jira, VirtualBox}
+\cvitem{Méthode}{eXtreme Programming, Scrum, ATDD, TDD, Specification by Example, Continuous I\&D}
+\cvitem{Architecture}{Hexagonale, SOA, Microservices, DDD, EAI, Event-Driven, Complex Event Processing}
+\cvitem{Langages}{Ada, C, Clips, \emph{Clojure}, CoffeeScript, Haskell, Java, JS, oCaml, Perl, PHP, Python, Ruby, Scala, Shell}
+\cvitem{Utilitaires}{Apache, vagrant, Jenkins, Git, cucumber, ant, maven, gradle, Nagios, eshell, Jira, VirtualBox}
 \cvitem{OS}{Linux, Mac OS X, Android, iOS, Solaris, Irix, AIX, Windows}
 \cvitem{Bureautique}{Emacs, \LaTeX, \XeTeX, Google Apps, IntelliJ IDEA}
-\cvitem{Langues}{Portugais, Anglais et Français (Lues, Parlées \& Écrites), Espagnol et Italien (Lues), Grec et Nheengatu (notions)}
-
-
+\cvitem{Langues}{Maîtrisés: Portugais, Anglais, Français. Lues: Espagnol, Italien. Notions: Grec, Nheengatu}
 
 \section{Expérience}
-\cventry{2012~–~\ldots}{Architecte Logiciel}{Linagora}{Puteaux}{}{Co-lead d'une équipe de 8, Développement de solutions de communication; création de projets R\&D avec recherche de partenariats; Organisation de MeetUPs; animation de conférences internes et externes; missions d'expertise \& conseil sur le développement, opérations et intégration; élaboration d'une architecture pour PaaS.}
-\cventry{2011}{Architecte Logiciel Junior}{ProxiAD}{Paris}{}{Architecture, conception et développement d'un moteur de calculs boursiers distribué et haute disponibilité en Java (prototype en Scala) et utilisant une DSL Xtext; lead technique sur 2 juniors.}
-\cventry{2007~–~2011}{Expert Technique}{Kompass International}{Courbevoie}{}{Rédaction de cahiers des charges; encadrement de 3 personnes en Scrum; développement de nouveaux projets (dont leur CRM sur 64 pays) ainsi que maintenance évolutive de leur SI (majoritairement Web et batch) sous C, Java, Perl, PHP et shell, en environnement Solaris.}
-\cventry{2006~–~2007}{Ingénieur Études et Développement}{Medibase Systèmes}{Courbevoie}{}{Développement d’applications médicales embarquées pour PDA et Smartphone en C, PHP et Python.}
+\cventry{2012~–~\ldots}{Architecte Logiciel}{Linagora}{Puteaux}{}{Co-lead d'une équipe de 8 personnes, développement de solutions de communication; création de projets R\&D avec recherche de partenariats; organisation de Meetups; animation de conférences internes et externes; missions d'expertise \& conseil sur le développement, les opérations et l'intégration; élaboration d'une architecture pour PaaS.}
+\cventry{2011}{Architecte Logiciel Junior}{ProxiAD}{Paris}{}{Architecture, conception et développement d'un moteur de calculs boursiers distribué et en haute disponibilité; en Java (prototype en Scala) utilisant une DSL Xtext; lead sur 2 juniors.}
+\cventry{2007~–~2011}{Expert Technique}{Kompass International}{Courbevoie}{}{Rédaction de cahiers des charges; encadrement de 3 personnes en Scrum; développement de nouveaux projets (dont un CRM sur 64 pays) ainsi que maintenance évolutive de leur SI (majoritairement Web et batch) sous C, Java, Perl, PHP et shell, en environnement Solaris.}
+\cventry{2006~–~2007}{{\scshape Ingénieur Études et Développement}}{Medibase Systèmes}{Courbevoie}{}{Développement d’applications médicales pour Smartphone en C, PHP et Python.}
 \cventry{2005}{Fondateur}{Kumps publication}{Belgique}{}{Création d'un outil de CMS interne, en PHP, pour Routing International.}
 \cventry{2004}{Stagiaire}{Scripps Research Institute}{USA}{}{Conception d’un logiciel en Perl pour générer des déformations de molécules, calculer le champ de force de chaque déformation et déduire l’équation générique du champs de force.}
 
-
-
-\section{Formations}
-\cventry{2006~–~2007}{M1 Informatique: Systèmes et Applications Répartis}{Université Pierre \& Marie Curie}{Paris}{}{}
-\cventry{2005~–~2006}{L3 Informatique}{Université Pierre \& Marie Curie}{Paris}{}{}
-\cventry{2004~–~2005}{Langue Anglaise}{University of Kingston Upon Thames}{United Kingdom}{}{}
-\cventry{2002~–~2004}{DUT Informatique Réseaux}{Université Picardie Jules Vernes}{Amiens}{}{}
-\cventry{2000~–~2002}{Génie Électrique}{UFAM}{Manaus, Brésil}{}{}
+\section{Formation}
+\cvformation{2006~–~2007}{M1 Systèmes et Applications Répartis}{Université Pierre \& Marie Curie}{Paris}{}{}
+\cvformation{2005~–~2006}{L3 Informatique}{Université Pierre \& Marie Curie}{Paris}{}{}
+\cvformation{2004~–~2005}{Langue Anglaise}{University of Kingston Upon Thames}{United Kingdom}{}{}
+\cvformation{2002~–~2004}{DUT Informatique Réseaux}{Université Picardie Jules Vernes}{Amiens}{}{}
+\cvformation{2000~–~2002}{Génie Électrique}{UFAM}{Brésil}{}{}
 
 \section{Loisirs}
-\cvitem{}{Logiciels libres, MeetUPs, Sérendipité, Jeux de rôles, Typographie, Gastronomie et Calisthenie.}
+\cvitem{}{Logiciels libres, Meetups, Sérendipité, Jeux de rôles, Typographie, Gastronomie et Calisthenie}
 \end{document}

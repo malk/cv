@@ -1,4 +1,4 @@
-cv.pdf : cv.tex photo.jpg
+cv.pdf : cv.tex photo.jpg fontawesome.sty moderncvstyleclassic.sty
 	xelatex $<
 
 clean:
